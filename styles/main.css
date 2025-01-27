@@ -1,0 +1,184 @@
+:root {
+  --main-rojo: #ff1530;
+  --main-blue: #005598;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url();
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+}
+main {
+  overflow: scroll !important;
+}
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  background-image: url("/imgs/Registro-Nacional-del-Hincha.webp");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  filter: var(--testia-morado);
+}
+.background-filter {
+  background-color: var(--main-blue);
+  opacity: 65%;
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  right: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-top: 60px;
+}
+
+.main-container {
+  max-width: 1300px;
+}
+
+.main-text {
+  color: white;
+  font-size: 24px;
+  text-align: left;
+  font-family: "Lato";
+}
+
+.main-title {
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: left;
+  font-family: "Lato";
+  margin: 0;
+}
+
+.text-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.main-text-container {
+  max-width: 600px;
+}
+
+.text-image-container img {
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+}
+
+.main-logo img {
+  width: auto;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 36px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.button {
+  background-color: var(--main-rojo);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  width: 170px;
+  text-align: center;
+}
+
+.blue {
+  background-color: var(--main-blue);
+}
+
+.footer {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1100px) {
+  .text-image-container {
+    flex-direction: column;
+  }
+  .main-text {
+    /* width: 100vw !important; */
+    width: calc(100vw - 20px) !important;
+  }
+  .text-image-container img {
+    width: calc(100vw - 20px);
+    max-width: 600px;
+    height: auto;
+  }
+  .content {
+    width: calc(100vw -10px) !important;
+  }
+  .main-text {
+    width: 100vw;
+    max-width: 600px;
+    font-size: 20px;
+  }
+  .main-logo img {
+    width: 300px;
+    height: auto;
+    padding: 10px 5px 5px 0;
+  }
+  .main-title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button-container {
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .main-text {
+    /* width: 100vw !important; */
+    width: calc(100vw - 20px) !important;
+  }
+  .button {
+    font-size: 18px;
+    margin: 2px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .main-logo img {
+    width: calc(100vw - 20px);
+    height: auto;
+    padding: 10px 5px 5px 0;
+  }
+  .main-title {
+    font-size: 30px;
+  }
+  .main-text {
+    font-size: 16px;
+  }
+}
